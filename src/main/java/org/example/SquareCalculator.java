@@ -31,7 +31,7 @@ public class SquareCalculator {
             }
             System.out.println("Y is not in range!");
         }
-        writeTestCase();
+
     }
 
     public int cal() {
@@ -39,23 +39,34 @@ public class SquareCalculator {
         return squareCal;
     }
 
-    public static void writeTestCase() {
-        String expectedResult, testCase, filename;
+    public void writeTestCase() {
+        String testCase, filename, isPass;
         Scanner userInput = new Scanner(System.in);
+        int expectedResult;
 
         System.out.println("Enter Filename: ");
         filename = userInput.nextLine();
 
         System.out.println("Enter Expected Result: ");
-        expectedResult = userInput.nextLine();
+        expectedResult = userInput.nextInt();
 
         LocalDateTime myDateObj = LocalDateTime.now();
         DateTimeFormatter date_time = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String date_timeString = myDateObj.format(date_time);
-        testCase = "Expected result: " + expectedResult + " ,Input x: " + String.valueOf(getX()) + ", Input y: " + String.valueOf(getY()) + ", Date Time" + date_timeString + "\n";
+
+        /*** Actual Test part.  **/
+        if (cal() == expectedResult){
+            isPass = "Passed !";
+        }
+        else {
+            isPass = "Not Passed!";
+        }
+        /*************************/
+
+        testCase = "Expected result: " + expectedResult + " ,Input x: " + String.valueOf(getX()) + ", Input y: " + String.valueOf(getY()) + ", Date Time" + date_timeString +" " + isPass + "\n";
         try {
-            System.out.println("C:/testing/" + filename + ".txt");
-            FileWriter fw = new FileWriter("C:/testing/" + filename + ".txt", true);
+            System.out.println(filename + ".txt"); /* change pathing */
+            FileWriter fw = new FileWriter( filename + ".txt", true);
             for (int i = 0; i < testCase.length(); i++)
                 fw.write(testCase.charAt(i));
 
