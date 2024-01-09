@@ -1,1 +1,0 @@
-Expected result: 40 ,Input x: 5, Input y: 8, Date Time10-01-2024 00:07:58 Passed !

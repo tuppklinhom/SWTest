@@ -14,6 +14,10 @@ public class SquareCalculator {
     static int y;
 
     public SquareCalculator() {
+
+    }
+
+    public int cal() {
         Scanner userInput = new Scanner(System.in);
         while (true) {
             System.out.println("Enter X: ");
@@ -32,58 +36,33 @@ public class SquareCalculator {
             System.out.println("Y is not in range!");
         }
 
-    }
 
-    public int cal() {
         int squareCal = x * y;
         return squareCal;
     }
 
-    public void writeTestCase() {
-        String testCase, filename, isPass;
-        Scanner userInput = new Scanner(System.in);
-        int expectedResult;
-
-        System.out.println("Enter Filename: ");
-        filename = userInput.nextLine();
-
-        System.out.println("Enter Expected Result: ");
-        expectedResult = userInput.nextInt();
-
-        LocalDateTime myDateObj = LocalDateTime.now();
-        DateTimeFormatter date_time = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        String date_timeString = myDateObj.format(date_time);
-
-        /*** Actual Test part.  **/
-        if (cal() == expectedResult){
-            isPass = "Passed !";
+    public int cal(int x, int y) {
+        this.x = x;
+        this.y = y;
+        if (x < 4 || x > 10) {
+            System.out.println("X is not in range!");
+            return -1;
         }
-        else {
-            isPass = "Not Passed!";
+        if (y < 8 || y > 12) {
+            System.out.println("Y is not in range!");
+            return -1;
         }
-        /*************************/
 
-        testCase = "Expected result: " + expectedResult + " ,Input x: " + String.valueOf(getX()) + ", Input y: " + String.valueOf(getY()) + ", Date Time" + date_timeString +" " + isPass + "\n";
-        try {
-            System.out.println(filename + ".txt"); /* change pathing */
-            FileWriter fw = new FileWriter( filename + ".txt", true);
-            for (int i = 0; i < testCase.length(); i++)
-                fw.write(testCase.charAt(i));
-
-            System.out.println("Successfully written");
-
-            // close the file
-            fw.close();
-        } catch (Exception e) {
-            e.getStackTrace();
-        }
+        int squareCal = x * y;
+        return squareCal;
     }
 
-    private static int getX() {
+
+    public static int getX() {
         return x;
     }
 
-    private static int getY() {
+    public static int getY() {
         return y;
     }
 
