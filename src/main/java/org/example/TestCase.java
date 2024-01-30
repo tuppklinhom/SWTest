@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class TestCase {
     private String filename;
+    private int count = 0;
 
     public TestCase(){
         Scanner userInput = new Scanner(System.in);
@@ -24,30 +25,30 @@ public class TestCase {
     }
 
     private void TestCal(int x, int y, int expectedResult){
-        String isPass;
+        long start = System.currentTimeMillis();
+        count++;
         SquareCalculator squareCalculator = new SquareCalculator();
-
-        if(squareCalculator.cal(x, y) == expectedResult){
-            isPass = "Passed !";
-        }else{
-            isPass = "Not Passed !";
-        }
-
-        LocalDateTime myDateObj = LocalDateTime.now();
-        DateTimeFormatter date_time = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        String date_timeString = myDateObj.format(date_time);
-
-
+        int ans = squareCalculator.cal(x, y);
 
         String testCase;
 
-        testCase = "Expected result: " + expectedResult + " ,Input x: " + String.valueOf(squareCalculator.getX()) + ", Input y: " + String.valueOf(squareCalculator.getY()) + ", Actual Result: " + squareCalculator.cal(x, y) + ", Date Time" + date_timeString + " " + isPass + "\n";
+        testCase ="[Test case " + count + " ]" +
+                 "\nInput: x=" + String.valueOf(squareCalculator.getX()) + ", y=" + String.valueOf(squareCalculator.getY()) +
+                "\nExpected result: " + expectedResult +
+                "\nActual Result: " + ans;
+        long finished = System.currentTimeMillis();
+        testCase = testCase + "\nExecution Time: " + (finished - start) + " ms\n";
         try {
             System.out.println(filename + ".txt"); /* change pathing */
             FileWriter fw = new FileWriter(filename + ".txt", true);
             for (int i = 0; i < testCase.length(); i++)
                 fw.write(testCase.charAt(i));
 
+            String testStart = "start = " + start + "\n";
+            fw.write(testStart);
+            String testFinish = "finish = " + finished + "\n";
+            fw.write(testFinish);
+            fw.write("===============================\n");
             System.out.println("Successfully written");
 
                 // close the file

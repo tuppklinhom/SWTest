@@ -19,21 +19,23 @@ public class SquareCalculator {
 
     public int cal() {
         Scanner userInput = new Scanner(System.in);
-        while (true) {
-            System.out.println("Enter X: ");
-            x = userInput.nextInt();
-            if (x >= 4 && x <= 10) {
-                break;
-            }
-            System.out.println("X is not in range!");
+        boolean xpass = false, ypass = false;
+
+        System.out.println("Enter X: ");
+        x = userInput.nextInt();
+        if (x >= 4 && x <= 10) {
+            xpass = true;
         }
-        while (true) {
-            System.out.println("Enter Y: ");
-            y = userInput.nextInt();
-            if (y >= 8 && y <= 12) {
-                break;
-            }
-            System.out.println("Y is not in range!");
+
+        System.out.println("Enter Y: ");
+        y = userInput.nextInt();
+        if (y >= 8 && y <= 12) {
+            ypass = true;
+        }
+
+
+        if (xpass == false || ypass == false){
+            return 0;
         }
 
 
