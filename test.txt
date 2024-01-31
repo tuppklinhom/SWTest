@@ -1,0 +1,90 @@
+[Test case 1 ]
+Input: x=4, y=8
+Expected result: 32
+Actual Result: 32
+Status: Pass
+Execution Time: 21 ms
+start = 1706689397998
+finish = 1706689398019
+===============================
+[Test case 2 ]
+Input: x=7, y=10
+Expected result: 70
+Actual Result: 70
+Status: Pass
+Execution Time: 1 ms
+start = 1706689398027
+finish = 1706689398028
+===============================
+[Test case 3 ]
+Input: x=6, y=8
+Expected result: 48
+Actual Result: 48
+Status: Pass
+Execution Time: 1 ms
+start = 1706689398028
+finish = 1706689398029
+===============================
+[Test case 4 ]
+Input: x=9, y=12
+Expected result: 108
+Actual Result: 108
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398029
+finish = 1706689398029
+===============================
+[Test case 5 ]
+Input: x=10, y=10
+Expected result: 100
+Actual Result: 100
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398029
+finish = 1706689398029
+===============================
+[Test case 6 ]
+Input: x=10, y=12
+Expected result: 120
+Actual Result: 120
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398041
+finish = 1706689398041
+===============================
+[Test case 7 ]
+Input: x=11, y=10
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398043
+finish = 1706689398043
+===============================
+[Test case 8 ]
+Input: x=8, y=13
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398043
+finish = 1706689398043
+===============================
+[Test case 9 ]
+Input: x=3, y=10
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398043
+finish = 1706689398043
+===============================
+[Test case 10 ]
+Input: x=5, y=7
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706689398044
+finish = 1706689398044
+===============================

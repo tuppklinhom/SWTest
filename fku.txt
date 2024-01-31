@@ -1,0 +1,103 @@
+[Test case 1 ]
+Test By: pop
+Input: x=4, y=8
+Expected result: 32
+Actual Result: 32
+Status: Pass
+Execution Time: 18 ms
+start = 1706690068182
+finish = 1706690068200
+===============================
+[Test case 2 ]
+Test By: pop
+Input: x=7, y=10
+Expected result: 70
+Actual Result: 70
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068211
+finish = 1706690068211
+===============================
+[Test case 3 ]
+Test By: pop
+Input: x=6, y=8
+Expected result: 48
+Actual Result: 48
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068212
+finish = 1706690068212
+===============================
+[Test case 4 ]
+Test By: pop
+Input: x=9, y=12
+Expected result: 108
+Actual Result: 108
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068212
+finish = 1706690068212
+===============================
+[Test case 5 ]
+Test By: pop
+Input: x=10, y=10
+Expected result: 100
+Actual Result: 100
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068223
+finish = 1706690068223
+===============================
+[Test case 6 ]
+Test By: pop
+Input: x=10, y=12
+Expected result: 120
+Actual Result: 120
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068224
+finish = 1706690068224
+===============================
+[Test case 7 ]
+Test By: pop
+Input: x=11, y=10
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068225
+finish = 1706690068225
+===============================
+[Test case 8 ]
+Test By: pop
+Input: x=8, y=13
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068225
+finish = 1706690068225
+===============================
+[Test case 9 ]
+Test By: pop
+Input: x=3, y=10
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068226
+finish = 1706690068226
+===============================
+[Test case 10 ]
+Test By: pop
+Input: x=5, y=7
+Expected result: -1
+Actual Result: -1
+Status: Pass
+Execution Time: 0 ms
+start = 1706690068226
+finish = 1706690068226
+===============================
+
+Total Pass: 10
+Total Not Pass: 0===============================
