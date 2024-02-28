@@ -59,10 +59,13 @@ public class TestCase {
         if (ans == expectedResult) {
             passStatus = "Pass";
             passCount++;
+            System.out.println("P");
+
         }
         else {
             passStatus = "Not Pass";
             notPassCount++;
+            System.out.println("F");
         }
 
         String testCase;
